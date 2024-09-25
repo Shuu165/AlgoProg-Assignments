@@ -1,50 +1,24 @@
-#Assignment
+#Session 4 Functions
+l1 = (1, 4, 7)
+l2 = (2, 4, 6)
 
-x = int(input("Enter Number 1:"))
-y = int(input("Enter Number 2:"))
-z = input("Enter Operator:")
+def defu(list1, list2):
 
-if z == "+":
-    Total = x + y
-elif z == "-":
-    Total = x - y
-elif z == "*":
-    Total = x * y
-elif z == ":":
-    Total = x / y
-print(Total)
+  defu_set = set(list1 + list2) # set = remove duplicates
+  defu_list = list(defu_set) # list = makes value into a list
 
-#Session 2 Assignment Morse Code Translator 
+  return defu_list # return = stores value
+result = defu(l1, l2)
+print(result)
 
-MyDict = {
-    "A" : ".-",
-    "B" : "-...",
-    "C" : "-.-.",
-    "D" : "-..",
-    "E" : ".",
-    "F" : "..-.",
-    "G" : "--.",
-    "H" : "....",
-    "I" : "..",
-    "J" : ".---",
-    "K" : "-.-",
-    "L" : ".-..",
-    "M" : "--",
-    "N" : "-.",
-    "O" : "---",
-    "P" : ".--.",
-    "Q" : "--.-",
-    "R" : ".-.",
-    "S" : "...",
-    "T" : "-",
-    "U" : "..-",
-    "V" : "...-",
-    "W" : ".--",
-    "X" : "-..-",
-    "Y" : "-.--",
-    "Z" : "--..",
-    " " : " "
-}
-sean = list(str.upper(input("WRITE SENTENCE")))
-for i in sean:
-    print(MyDict[i], end = " ")
+#Extra Points! Recursions
+def james(k):
+  if(k > 0):
+    result = k + james(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+james()
